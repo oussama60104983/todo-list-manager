@@ -11,6 +11,7 @@ A Flask-based web application for managing todos with a clean interface and REST
 ## Installation Instructions
 
 ### Clone the Repository
+
 ```bash
 git clone <repository-url>
 cd todo-manager
@@ -19,6 +20,7 @@ cd todo-manager
 ### Setting Up Virtual Environment
 
 #### For macOS/Linux:
+
 ```bash
 # Create virtual environment
 python3 -m venv venv
@@ -28,6 +30,7 @@ source venv/bin/activate
 ```
 
 #### For Windows:
+
 ```bash
 # Create virtual environment
 python -m venv venv
@@ -39,6 +42,7 @@ venv\Scripts\activate
 ### Install Dependencies
 
 With the virtual environment activated, install the required packages:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -46,11 +50,13 @@ pip install -r requirements.txt
 ## Running the Application
 
 ### First Time Setup
+
 When running the application for the first time, the SQLite database will be automatically created.
 
 ### Starting the Server
 
 #### For macOS/Linux:
+
 ```bash
 # Make sure your virtual environment is activated
 source venv/bin/activate
@@ -60,6 +66,7 @@ python3 app.py
 ```
 
 #### For Windows:
+
 ```bash
 # Make sure your virtual environment is activated
 venv\Scripts\activate
@@ -90,6 +97,7 @@ The application will be available at `http://localhost:5001`
 - DELETE `/api/todos/<id>` - Delete a todo
 
 ## Project Structure
+
 ```
 todo_manager/
 ├── app.py               # Main Flask application
@@ -109,32 +117,40 @@ todo_manager/
 ## Troubleshooting
 
 ### Port Already in Use
+
 If you get an error about port 5001 being in use:
+
 1. Change the port number in `app.py`
 2. Or kill the process using the port:
+
    ```bash
    # For macOS/Linux
    lsof -i :5001
    kill -9 <PID>
-   
+
    # For Windows
    netstat -ano | findstr :5001
    taskkill /PID <PID> /F
    ```
 
 ### Virtual Environment Issues
+
 If you have problems with the virtual environment:
+
 1. Delete the `venv` directory
 2. Re-create it following the installation steps above
 
 ### Database Issues
+
 If you encounter database problems:
+
 1. Delete the `todos.db` file
 2. Restart the application to create a fresh database
 
 ## Deactivating Virtual Environment
 
 When you're done working on the project:
+
 ```bash
 deactivate
 ```
@@ -150,3 +166,5 @@ deactivate
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details
+
+TEST1
